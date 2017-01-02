@@ -1,0 +1,13 @@
+<%= form_for(@article) do |f| %>
+		<% @article.errors.full_messages.each do |message| %>
+			<li class="text-danger"><%= message %></li>
+  	 	<%end%>
+		<div class="form-group">
+			<%= f.text_field :title, placeholder: "Titulo", class: "form-control" %>
+		</div>
+		<div class="form-group">
+			<%= f.text_area :body, placeholder: "Descripcion", class: "form-control", style: "max-height: 200px; max-width: 100%;" %>
+		</div>
+		<%= f.submit "Guardar", disable_with: 'Creando...', class: "btn btn-primary" %>
+	</div>
+<%end%>

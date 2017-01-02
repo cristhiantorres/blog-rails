@@ -1,6 +1,6 @@
 <% @articles.each do |article| %>
 	<h2><%= article.title %></h2>
 	<div>
-		<%= article.body %>
+		<%= article.body %> - <%= link_to "Eliminar", article , method: :delete, class: 'btn btn-default' %>
 	</div>
 <%end%>
