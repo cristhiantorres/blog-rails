@@ -1,0 +1,20 @@
+<div class="col-md-6 col-md-offset-3">
+	<p id="notice"><%= notice %></p>
+	
+	<p>
+	  <strong>User:</strong>
+	  <%= @comment.user.email %>
+	</p>
+	
+	<p>
+	  <strong>Articulo:</strong>
+	  <%= @comment.article.title %>
+	</p>
+	
+	<p>
+	  <strong>Body:</strong>
+	  <%= @comment.body %>
+	</p>
+<%= link_to 'Edit', edit_comment_path(@comment) ,class: 'btn btn-primary' %> |
+<%= link_to 'Back', comments_path , class: 'btn btn-default' %>
+</div>

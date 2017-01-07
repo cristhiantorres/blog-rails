@@ -7,9 +7,21 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <div class="container"><%= render "layouts/navbar" %>
+    <div class="container">
+    <%= render "layouts/navbar" %>
+    <%if notice %>
+    <p class="alert alert-success alert-dismissable" role="alert">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <%= notice %>
+    </p>
+    <%end%>
+    <%if alert %>
+    <p class="alert alert-alert alert-dismissable" role="alert">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <%= alert %>
+    </p>
+    <%end%>
     <%= yield %>
     </div>
   </body>

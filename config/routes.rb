@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :articles, except: [:delete]
+  resources :categories
+  devise_for :users
+  resources :articles do
+    resources :comments, only: [ :create, :update, :destroy]
+  end
+
 =begin
   	get "/articles"
   	post "/articles"
@@ -10,7 +15,7 @@ Rails.application.routes.draw do
   	patch "/articles/:id"
   	put "/articles/:id"
 =end
-  root 'welcome#index'
+  root 'articles#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

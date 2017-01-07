@@ -16,8 +16,13 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+# Gema de Autenticacion
+gem 'devise'
 # Bootstrap
 gem 'bootstrap-sass'
+
+#Paperclip
+gem 'paperclip'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -29,6 +34,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+# gem "therubyracer"
+# gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+# gem "twitter-bootstrap-rails"
+
+#gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

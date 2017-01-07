@@ -1,4 +1,15 @@
 <h2><%= @article.title %></h2>
+	<%= image_tag @article.cover.url(), class: 'img-responsive img-rounded' %>
 <div>
 	<%= @article.body %>
+</div>
+<div class="col-md-3">
+<h4>Comentarios</h4>
+	<%= render "comments/form" %>
+		<% @article.comments.each do |comment| %>
+			<div class="panel panel-default">
+    			<div class="panel-heading"><%= comment.user.email %></div>
+    			<div class="panel-body"><%= comment.body %></div>
+  			</div>
+		<% end %>
 </div>
